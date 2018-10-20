@@ -1,14 +1,15 @@
 {
   "name": "discord-irc",
-  "version": "2.6.2",
-  "description": "Connects IRC and Discord channels by sending messages back and forth.",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Discord and IRC relay for U413",
   "keywords": [
     "discord",
     "irc",
     "gateway",
     "bot",
     "discord-irc",
-    "reactiflux"
+    "u413"
   ],
   "engines": {
     "node": ">=6.0.0"
@@ -17,22 +18,17 @@
   "bin": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:reactiflux/discord-irc.git"
-  },
-  "bugs": {
-    "url": "https://github.com/reactiflux/discord-irc/issues"
+    "url": "git@github.com:U413/discord-irc.git"
   },
   "scripts": {
     "start": "node dist/index.js",
     "build": "babel lib --out-dir dist",
     "prepare": "npm run build",
     "lint": "eslint . --ignore-path .gitignore",
-    "coverage": "nyc --require babel-core/register _mocha -- test/*.test.js",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "test": "npm run lint && npm run coverage"
+    "test": "npm run lint"
   },
   "author": {
-    "name": "Reactiflux"
+    "name": "EnKrypt"
   },
   "license": "MIT",
   "dependencies": {
@@ -54,12 +50,10 @@
     "babel-preset-node6": "^11.0.0",
     "babel-preset-stage-0": "^6.5.0",
     "chai": "^4.0.2",
-    "coveralls": "^3.0.0",
     "eslint": "^4.8.0",
     "eslint-config-airbnb-base": "^12.0.1",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^5.0.0",
-    "nyc": "^13.0.1",
     "sinon": "^4.0.1",
     "sinon-chai": "^2.8.0"
   }
